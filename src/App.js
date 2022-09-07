@@ -1,11 +1,24 @@
 import React from "react";
+import Dice from "./components/Dice.js"
 import "./style.css";
 
 export default function App() {
+  const [diceList, setDiceList] = React.useState(createDice())
+
+  function createDice(){
+    return Array.from({length: 10}, () => Math.ceil(Math.random()*6));
+  }
+
+  const diceElements = diceList.map(d => <Dice value={d} />)
+
+  const dices = createDice
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <main>
+        <div className="dice">
+          {diceElements}
+        </div>
+      </main>
     </div>
   );
 }
