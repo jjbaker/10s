@@ -6,6 +6,7 @@ body {
   margin: 0;
   background-color: #0B2434;
   padding: 20px;
+  font-family: 'Karla', sans-serif;
 }
 
 main {
@@ -15,6 +16,7 @@ main {
   border-radius: 5px;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   }
@@ -33,4 +35,25 @@ main {
   align-items: center;
   background-color: white;
   font-size: 20px;
+  color: #0B2434
+}
+.roll--button{
+
+  box-shadow: 0px 3.1999998092651367px 7.679999828338623px 0px rgba(0, 0, 0, 0.18);
+  background-color: rgba(80, 53, 255, 1);
+  border-radius: 4px;
+  color: white;
+  margin: 20px;
+  font-size: 25px;
+  padding:10px;
+  border: none;
+  font-family: 'Karla', sans-serif;
+}
+
+.roll--button:focus {
+  outline: none;
+}
+
+.roll--button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }

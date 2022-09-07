@@ -5,8 +5,13 @@ import "./style.css";
 export default function App() {
   const [diceList, setDiceList] = React.useState(createDice())
 
-  function createDice(){
-    return Array.from({length: 10}, () => Math.ceil(Math.random()*6));
+  function createDice(len=10){
+    return Array.from({length: len}, () => Math.ceil(Math.random()*6));
+  }
+
+  function rollDice() {
+    const newRoll = createDice();
+    setDiceList(newRoll)
   }
 
   const diceElements = diceList.map(d => <Dice value={d} />)
@@ -18,6 +23,7 @@ export default function App() {
         <div className="dice">
           {diceElements}
         </div>
+        <button className="roll--button" onClick={rollDice}>Roll</button>
       </main>
     </div>
   );
