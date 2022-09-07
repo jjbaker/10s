@@ -8,7 +8,7 @@ export default function Dice(props) {
   return (
     <div 
       className="dice--num"
-      onClick={(event) => props.onClick(props.id)}
+      onClick={props.onClick}
       style={styles}
     >
       <h2>{props.value}</h2>
